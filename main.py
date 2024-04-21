@@ -33,7 +33,7 @@ def get_name_heroes():
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
     get_name_heroes()
-    bot.send_message(message.chat.id, 'Я бот по dota 2. Просьба не спамить этому боту, так как api для этого бота даёт только 250 вызовов в минуту. Если бот не работает, то значит или идёт обновление, или его не успели занести на сервер и при этом код не запущен на пк создателя. Напишите Жоре на счёт этого.', reply_markup=keyboard)
+    bot.send_message(message.chat.id, 'Я бот по dota 2. Я выдаю информацию по героям и их способностям dota 2. Просьба не спамить этому боту, так как api для этого бота даёт только 250 вызовов в минуту.', reply_markup=keyboard)
 
 @bot.message_handler(func=lambda x: 'Hello' in x.text)
 def hello_message(message):
